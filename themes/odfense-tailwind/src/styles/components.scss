@@ -1,0 +1,90 @@
+// section style
+.section {
+  @apply py-24 xl:py-28;
+}
+
+// container
+.container {
+  @apply mx-auto max-w-[1320px] px-5 sm:px-10 2xl:px-0;
+}
+
+
+// form style
+.form-input {
+  @apply w-full rounded border-border bg-white p-4 text-dark placeholder:text-light focus:border-secondary focus:ring-transparent;
+}
+
+.form-label {
+  @apply mb-4 block font-medium text-dark;
+}
+
+// social icons
+.social-icons {
+  @apply space-x-4;
+  li {
+    @apply inline-block;
+    a {
+      @apply flex h-9 w-9 items-center justify-center rounded bg-primary text-center leading-9 text-white;
+      svg {
+        @apply h-5 w-5;
+      }
+    }
+  }
+}
+
+
+// swiper pagination
+.swiper-pagination-bullet {
+  @apply h-2.5 w-2.5 bg-theme-light opacity-100;
+
+  &-active {
+    @apply h-4 w-4 bg-primary;
+  }
+}
+
+
+// accordion
+.accordion {
+  @apply overflow-hidden rounded-lg;
+  &-header {
+    @apply bg-theme-light flex w-full cursor-pointer items-center gap-5 px-4 py-4 font-semibold text-text border border-border rounded-lg text-left; 
+  }
+  &-icon {
+    @apply h-[.8em] w-[.8em] rotate-[-90deg] transition-transform duration-200;
+  }
+  &-content {
+    @apply max-h-0 overflow-hidden px-4 pb-6 opacity-0 transition-all duration-150;
+  }
+  &.active {
+    .accordion-icon {
+      @apply rotate-0;
+    }
+    .accordion-content {
+      @apply max-h-screen opacity-100 pt-6; 
+    }
+  }
+}
+
+
+// content style
+.content {
+  @apply prose max-w-none;
+  @apply prose-headings:mb-[.3em] prose-headings:mt-[.6em] prose-headings:text-dark;
+  @apply prose-h1:text-h1-sm md:prose-h1:text-h1;
+  @apply prose-h2:text-h2-sm md:prose-h2:text-h2;
+  @apply prose-h3:text-h3-sm md:prose-h3:text-h3;
+  @apply prose-img:max-w-full prose-img:rounded;
+  @apply prose-hr:border-border;
+  @apply prose-p:text-base prose-p:text-text;
+  @apply prose-blockquote:rounded-lg prose-blockquote:border prose-blockquote:border-l-[10px] prose-blockquote:border-primary prose-blockquote:bg-theme-light prose-blockquote:px-8 prose-blockquote:py-10 prose-blockquote:text-2xl prose-blockquote:not-italic prose-blockquote:text-dark;
+  @apply prose-pre:rounded-lg prose-pre:bg-theme-light;
+  @apply prose-code:px-1 prose-code:text-primary;
+  @apply prose-strong:text-dark;
+  @apply prose-a:text-text prose-a:underline hover:prose-a:text-primary;
+  @apply prose-li:text-text;
+  @apply prose-table:relative prose-table:overflow-hidden prose-table:rounded-lg prose-table:before:absolute prose-table:before:left-0 prose-table:before:top-0 prose-table:before:h-full prose-table:before:w-full prose-table:before:rounded-[inherit] prose-table:before:border prose-table:before:content-[""];
+  @apply prose-thead:border-border prose-thead:bg-theme-light;
+  @apply prose-th:relative prose-th:z-10 prose-th:px-4 prose-th:py-[18px] prose-th:text-dark;
+  @apply prose-tr:border-border;
+  @apply prose-td:relative prose-td:z-10 prose-td:px-3 prose-td:py-[18px];
+}

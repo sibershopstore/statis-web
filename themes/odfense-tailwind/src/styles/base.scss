@@ -1,0 +1,77 @@
+html {
+  @apply text-base-sm md:text-base;
+  
+  /* PERBAIKAN: Memaksa scrollbar vertikal selalu muncul untuk mencegah layout shift */
+  overflow-y: scroll;
+  scrollbar-gutter: stable; /* Dukungan modern browser */
+  width: 100vw; /* Pastikan lebar selalu viewport penuh */
+  overflow-x: hidden; /* Mencegah scroll horizontal */
+}
+
+body {
+  @apply bg-body text-base font-primary font-normal leading-relaxed text-text;
+  width: 100%; /* Pastikan body mengikuti html */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-medium leading-snug text-dark;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  span {
+    @apply text-light;
+  }
+}
+
+h1,
+.h1 {
+  @apply text-h1-sm md:text-h1;
+}
+
+h2,
+.h2 {
+  @apply text-h2-sm md:text-h2;
+}
+
+h3,
+.h3 {
+  @apply text-h3-sm md:text-h3;
+}
+
+h4,
+.h4 {
+  @apply text-h4;
+}
+
+h5,
+.h5 {
+  @apply text-h5;
+}
+
+h6,
+.h6 {
+  @apply text-h6;
+}
+
+b,
+strong {
+  @apply font-semibold;
+}
+
+code {
+  @apply after:border-none;
+}
+
+blockquote > p {
+  @apply my-0 #{!important};
+}
